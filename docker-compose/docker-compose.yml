@@ -1,0 +1,35 @@
+#声明版本
+version: "3"
+services:
+  #服务名称,并且这个服务名称能够在同一个网络中访问
+  consul-xzx:
+    image: consul:1.8.8
+    ports:
+      - "8500:8500"
+  #链路追踪
+  jaeger-xzx:
+    image: cap1573/jaeger
+    ports:
+      - "6831:6831/udp"
+      - "16686:16686"
+  #熔断器
+  hystrix-dashboard:
+    #说明镜像名称
+    image: cap1573/hystrix-dashboard
+    ports:
+      - "9002:9002"
+
+  #监控
+  prometheus:
+    image: cap1573/prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+  #监控看板
+  grafana:
+    image: cap1573/grafana
+    ports:
+      - "3000:3000"
+
+

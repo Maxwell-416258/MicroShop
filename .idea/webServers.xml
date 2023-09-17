@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2a0d4743-d5d6-4e39-930b-18e9c36e6ab2" name="Gomicro">
+        <fileTransfer accessType="SFTP" host="192.168.1.201" port="22" sshConfigId="ea078610-e071-4d96-a09b-4ea3539c661f" sshConfig="root@192.168.1.201:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
